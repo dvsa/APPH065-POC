@@ -1,0 +1,59 @@
+#header-logos {
+    BACKGROUND-IMAGE: url(../images/car2_banner2.jpg)
+}
+
+#brandingHeader {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+    line-height: 1;
+    list-style: none;
+    border-collapse: collapse;
+    background-color: inherit;
+    border-spacing: 0;
+}
+
+#brandingHeader .brandingWrapper {
+    height: 55px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #0b0c0c;
+    margin: 0 auto;
+}
+
+.brandingHeaderGlobal {
+    float: left;
+    width: 100%;
+}
+
+#brandingHeader .brandingWrapper .brandingHeaderGlobal .header-logo {
+    float: left;
+    text-align: left;
+    display: block;
+}
+
+#brandingHeader #logo {
+    margin: 5px 0 2px;
+    float: left;
+    height: 30px;
+    font-weight: 400;
+    font-family: Helvetica, Arial;
+    font-size: 20px;
+}
+
+#brandingHeader #logo img {
+    display: inline;
+    padding-right: 6px;
+    position: relative;
+    height: 31px;
+    top: 6px;
+}
+
+#global-header-bar .header-bar {
+    background-color: #005ea5;
+    height: 10px;
+}

@@ -1,0 +1,50 @@
+/*-----------------------------------------------
+help.css
+
+created for TOP style guide
+This is only intended for the standalone help page 
+
+Version 3.0 RJHurst rick@olivewoodtech.co.uk 28/01/2008
+- formatted and checked for TOP style guide v3.0
+- styles prefaced with TOP_ (missed before)
+-------------------------------------------------*/
+
+body {
+	background-color:#FFFFFF;	
+	padding: 0;
+	margin: 10px;
+	font-size:75%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color:#333;
+}
+
+#TOP_header #TOP_top-logo {
+  float:left;
+}
+
+#TOP_header #TOP_mock-agency-logo {
+  float:right;
+}
+
+h1 {
+	font-size:1em;
+	clear:both;
+	padding-top:20px;
+}
+
+h2 {
+	font-size:0.85em;
+}
+
+h3 {
+	font-size:0.8em;
+}
+
+p {
+	font-size:0.7em;
+}
+
+#TOP_footer{
+  text-align:right;
+  font-size:small;	
+}

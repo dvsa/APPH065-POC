@@ -1,0 +1,47 @@
+/*--------------------------------------------------------
+mock_agency.css
+
+This file contains styles that are specific to the mock
+agency examples - these are examples of supplementary
+CSS styles used to fine tune the rest of the CSS 
+
+Version 3.0 RJHurst rick@olivewoodtech.co.uk 28/01/2008
+- Formatted and checked for TOP Style Guide v3.0
+---------------------------------------------------------*/
+
+
+#TOP_loginForm {
+  float:right;
+  width:370px;
+}
+
+/*-----------------------------------*/
+/* The first text area is aligned    */
+/* left in this example              */
+#TOP_text1 {
+  float:left;
+  width:370px;
+  padding-top:25px;
+}
+
+#TOP_loginForm .login-form-table {
+  width:370px;
+}
+
+#TOP_loginForm h3.TOP_portalSection {
+  width:370px;
+}
+
+#TOP_text2 {
+  margin-bottom:20px;
+}
+
+#TOP_poweredBy img {
+  margin-left:20px;
+}
+
+#TOP_fieldJobDescription {
+  width:400px;
+  height:250px;
+}
+

@@ -1,0 +1,34 @@
+/*--------------------------------------
+full_width.css
+
+This is an optional stylesheet that causes
+the elements listed below to use the full
+width of the layout
+
+Version 3.0 RJHurst rick@olivewoodtech.co.uk 28/01/2008
+- formatted and checked for TOP Style Guide
+----------------------------------------*/
+
+#TOP_masthead,
+#TOP_breadcrumb {
+	left:10px;
+	width:760px;
+}
+
+#TOP_main {
+	left:10px;
+	width:760px;
+}
+
+#TOP_footer {
+	width:760px;
+	text-align:center;
+}
+
+table.form {
+	width:760px;
+}
+
+#TOP_mainFull {
+	width:auto;
+}

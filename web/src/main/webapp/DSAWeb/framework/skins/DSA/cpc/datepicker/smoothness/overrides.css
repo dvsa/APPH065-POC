@@ -1,0 +1,15 @@
+/* adds some padding to the calendar button, and ensure it stays right of the text field */
+.ui-datepicker-trigger, .ui-datepicker-trigger:hover {
+    padding-left: 5px;
+    display: inline;
+}
+
+/* highlights weekend dates in dark red */
+.ui-datepicker-week-end {
+    color: #9c0030;
+}
+
+/* styling for the text field itself */
+.w8em {
+    width: 8em;
+}

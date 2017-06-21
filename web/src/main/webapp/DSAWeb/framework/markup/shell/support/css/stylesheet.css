@@ -1,0 +1,256 @@
+
+/* 
+Please create styles in this style sheet only. Dont use #ffffff in your jsp page.
+*/
+
+/* back groung colors */
+.bgaltgray{background-color:#EBEBEB;}
+.bgbeige{background-color:#DFDFAB;}
+.bgblack{background-color:#000000;}
+.bgblue{background-color:#00235D;}
+.bgbluelight{background-color:#AACFDE;}
+.bgbrown{background-color:#5a300f;}
+.bgceladon{background-color:#a5c481;}
+.bgcellight{background-color:#DBEBC6;}
+.bgcelmedium{background-color:#c7ddad;}
+.bgcoolgray{background-color:#dddddd;}
+.bggold{background-color:#f9b40d;}
+.bggoldlight{background-color:#FFFF99;}
+.bggreen{background-color:#005943;}
+.bglightgreen{background-color:#A7AC6D;}
+.bggray{background-color:#666666;}
+.bgolive{background-color:#666633;}
+.bgorange{background-color:#dd761a;}
+.bgorlight{background-color:#FFEFB4;}
+.bgormedium{background-color:#f69a10;}
+.bgpurple{background-color:#5a126c;}
+.bgpurplelight{background-color:#D4C2D9;}
+.bgpurplemedium{background-color:#8B5998;}
+.bgred{background-color:#A80019;}
+.bgyellow{background-color:#DBDB56;}
+.bgirdt{background-color:#a08dc3;}
+.bgwhite{background-color:#ffffff;}
+
+
+.sbBar,.SideHead-1,.headingOneBgColor{background-color:#FFFFFF;border-top:1px solid #a08dc3;color:#a08dc3;font-size:14px;font-weight:bold;padding-top:3px;}
+a.sbBar,a.SideHead-1,a.headingOneBgColor{color:#a08dc3;text-decoration:none;font-weight:bold;padding-top:3px;}
+a.sbBar:active,a.SideHead-1:active,a.headingOneBgColor:active{font-weight:bold;padding-top:3px;color:#a08dc3;}
+a.sbBar:visited,a.SideHead-1:visited,a.headingOneBgColor:visited{color:#006951;font-weight:bold;padding-top:3px;}
+a.sbBar:hover,a.SideHead-1:hover,a.headingOneBgColor:hover{color:#DD761A;font-weight:bold;padding-top:3px;}
+
+
+
+.multiboxstyle
+{
+	width=225;
+    border-color: #a08dc3;
+    size=15;
+	height=175;
+    border:solid 1px #a08dc3;
+	background-color:#ffffff;
+	color:#000000;	
+	font-family:Verdana, Arial,Helvetica,sans-serif;font-size:small;
+}
+
+.tablestyle
+{
+    margin: 0px;
+    padding: 0px;
+    spacing: 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a08dc3;
+    background-color: #ffffff;
+    /* Fix for IE height problem; uses Mozilla's recognition of and IE's ignorance of C-style line comment... */
+    //height: 100%;
+}
+
+
+.form-field {
+   color: #000000;
+   border: 1px solid #a08dc3;
+   background-color: #ffffff;
+   font-family: Verdana, Arial, Helvetica;
+   font-size: 100f%;
+   font-weight: 500;
+   text-align: left;
+   }
+
+
+.form-button, .btnstyle, .selectstyle, .LoginBtn {
+   font-family: Verdana, Arial, Helvetica;
+   background: #ffffff;              
+   color: #4a126c;
+   font-size: 70%;
+   font-weight: normal;
+   border-top: 1px solid #a08dc3;
+   border-left: 1px solid #a08dc3;
+   border-right: 1px solid #a08dc3;
+   border-bottom: 1px solid #a08dc3;
+   padding: 1px 1px 1px 1px;
+   margin: 2px 2px 2px 2px;
+   }
+
+
+.tableHead, .headingOne
+{
+    padding: 0px;
+    margin: 0px;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #a08dc3;
+    font-size: small;
+    width: 100%;
+    background-color: #a08dc3;
+}
+
+
+.sectionHead, .f2largeblack
+{
+color:#000000;font-family:Arial,Helvetica,sans-serif;font-size:100%;
+}
+
+
+.portal-window
+{
+    margin: 5px;
+    padding: 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a08dc3;
+    background-color: #ffffff;
+    /* Fix for IE height problem; uses Mozilla's recognition of and IE's ignorance of C-style line comment... */
+    //height: 100%;
+}
+
+.portal-window-content
+{
+    margin: 4px;
+    padding: 0px;
+    scrollbar-base-color:#f0f0f0;
+}
+
+
+.portal-window-titlebar
+{
+    padding: 0px;
+    margin: 0px;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #a08dc3;
+    font-size: medium;
+    width: 100%;
+    background-color: #a08dc3;
+}
+
+.portal-window-titlebar-title
+{
+    padding: 0px;
+    margin: 0px;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: left;
+    color:#ffffff;
+}
+
+.portal-window-titlebar-buttons
+{
+    white-space: normal;
+    padding: 0px;
+    margin: 0px;
+    font-size: x-small;
+    vertical-align: middle;
+    text-align: right;
+}
+
+
+/* text fonts */
+
+.f2smallwhite{color:#FFFFFF;font-family:Verdana,Arial,Helvetica,sans-serif;font-size:small;font-weight:normal;}
+.f2mediumwhite{color:#FFFFFF;font-family:Verdana,Arial,Helvetica,sans-serif;font-size:medium;font-weight:normal;}
+.f2largewhite{color:#FFFFFF;font-family:Verdana,Arial,Helvetica,sans-serif;font-size:large;font-weight:normal;}
+.f2xsmallwhite{color:#FFFFFF;font-family:Verdana,Arial,Helvetica,sans-serif;font-size:x-small;font-weight:normal;}
+
+.f2smallblack, .smallfontblack {color:#000000;font-family:Verdana,Arial,Helvetica,sans-serif;font-size:small;font-weight:normal;}
+.f2mediumblack, .mediumfontblack {color:#000000;font-family:Verdana,Arial,Helvetica,sans-serif;font-size:medium;font-weight:normal;}
+.f2largewblack, .largefontblack {color:#000000;font-family:Verdana,Arial,Helvetica,sans-serif;font-size:large;font-weight:normal;}
+.f2xsmallblack, .smallfontblack {color:#000000;font-family:Verdana,Arial,Helvetica,sans-serif;font-size:x-small;font-weight:normal;}
+
+
+/*For invalid messages*/
+.invalid-message
+{
+	font-size: 70%; font-weight: bold; font-family:Verdana, Arial, Helvetica, sans-serif; COLOR: RED;
+}
+/*For user input in form*/
+.user-input, .inputstyle, .textstyle
+{
+	font-size: 80%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal;font-weight: bold; border:solid 1px #a08dc3;
+}
+/*For field header*/
+.field-header
+{
+	font-size: 85%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal;font-weight: bold
+}
+/*For field label*/
+.field-label, .labelstyle, .fieldstyle
+{
+	font-size: 100%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal
+}
+/*For field instruction*/
+.field-instruction
+{
+	font-size: 70%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal
+}
+/*For table header*/
+.table-header
+{
+	font-size: 80%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal;font-weight: bold;color: #FFFFFF
+}
+/*For messages*/
+.message
+{
+	font-size: 80%; font-weight: bold; font-family:Verdana, Arial, Helvetica, sans-serif; COLOR: RED;
+}
+/*For button labels*/
+.button-label{
+	font-size: 80%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal
+}
+/*For mandatory fields for asterik*/
+.mandatory-field{
+	color: #FF0000
+}
+/*For hyperlink label*/
+.hyperlink-label
+{
+	font-size: 80%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal; font-weight: bold
+}
+/*For link*/
+pagelink:link{
+....font-weight: normal;
+....color: #0033FF;
+....text-decoration: none
+}
+/*For visited link*/
+pagelink:visited{
+....font-weight: normal;
+....color: #990000;
+....text-decoration: none
+}
+/*For link hovering*/
+pagelink:hover{
+....font-weight: bold;
+....color: #FF0000;
+....text-decoration: none;
+}
+/*For link active*/
+pagelink:active{
+....font-weight: bold;
+....color: #FF0000;
+....text-decoration: none;
+}
+/*Error message*/
+.err-heading
+{
+FONT-SIZE: 70%; MARGIN: 2px; voice-family: inherit; font-weight: bold; font-family:Arial,Helvetica,sans-serif; COLOR: RED;
+}

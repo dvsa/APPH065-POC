@@ -1,0 +1,234 @@
+.TOP_formButtons {
+    overflow: auto;
+}
+
+.cpc_portletArea {
+    font-weight: normal;
+    color: #9c0030;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+div.cpc_portletArea p {
+    font-weight: normal;
+    color: #9c0030;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    text-align: left;
+}
+
+div.cpc_portletArea h1 {
+    padding: 0px;
+    margin: 2px;
+    font-size: 12px;
+    color: #9c0030;
+    font-weight: bold;
+    width: 100%;
+    line-height: 20px;
+    text-align: left;
+}
+
+div.cpc_portletArea h2 {
+    padding: 0px;
+    margin: 2px;
+    font-size: 10px;
+    color: #9c0030;
+    font-weight: bold;
+    width: 100%;
+    line-height: 15px;
+    text-align: left;
+}
+
+div.cpc_portletArea h3 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 10px;
+    font-color: #FFFFFF;
+    font-weight: bold;
+    color: #FFFFFF;
+    width: 100%;
+    background-color: #da4c6e;
+    text-align: left;
+}
+
+h3.TOP_portalSection {
+   width: 100%;
+}
+
+div.cpc_portletArea label {
+    color: #9c0030;
+    font-weight: bold;
+}
+
+.TOP_row_odd {
+	background-color: #f9f0f3;
+}
+
+.TOP_row_even {
+	background-color: #FFFFFF;
+}
+
+h1.TOP_portalSection
+{
+    padding: 0px;
+    margin: 0px;
+    font-size: 10px;
+    font-color: #FFFFFF;
+    font-weight: normal;
+    color: #FFFFFF;
+    width: 100%;
+    background-color: #da4c6e;
+    text-align: left;
+}
+
+table.TOP_form td {
+	text-align: left;
+}
+
+.TOP_label {    
+	font-weight: normal;
+	font-size: 10px; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-style: normal;
+	color: #9c0030;
+	text-align: left;
+}
+
+.TOP_portalButton {
+    color: #9c0030;
+    border: 1px outset;
+    background-color: #ebccd6;
+    padding-left: 5px;
+    padding-right:5px;
+    padding-top:1px;
+    height: 20px;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    font-weight: normal;
+    text-decoration: none;
+    border-color: #ffffff #ffffff #ffffff #ffffff;
+}
+
+.TOP_textField {
+    font-weight: normal;
+    color: #9c0030;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    border: 1px solid #b9b5ab;
+    padding-left: 3px;
+    background-color: #f9f0f3;
+    width: 150px;
+}
+
+#reportType {
+    width: 250px;
+}
+
+thead {
+	display: table-header-group;
+}
+
+.w8em {
+    font-weight: normal;
+    color: #9c0030;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    border: 1px solid #b9b5ab;
+    padding-left: 3px;
+    background-color: #f9f0f3;
+    width: 80px;
+}
+
+/* IE8-18: Fix for The div box/border that surrounds the Contents of CPC and CPC RE Screens (TOP_mainFull). */
+.bea-portal-window-content:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix:after {
+    content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;
+}
+
+/* These may be used for other browsers. */
+/*.clearfix {
+    display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+* html .clearfix {
+    height: 1%;
+}*/
+
+/* IE8-18: This is need to ensure that a space is maintained below the buttons for CPC Screens (Padding set to 5). */
+.bea-portal-window
+{
+    margin: 5px;
+    padding: 0px;
+    padding-bottom: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a08dc3;
+    background-color: #ffffff;
+    /* Fix for IE height problem; uses Mozilla's recognition of and IE's ignorance of C-style line comment... */
+    height: 100%;
+}
+
+
+.wideButtonRight {
+    float: right;
+    text-align: right;
+}
+
+/*
+ * Course run driver details.
+ */
+
+.driver_details {
+    border-left: #ccc solid 1px; 
+    border-bottom: #ccc solid 1px;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;"
+}
+
+.additional_details {
+    display: none;
+    margin-bottom: 1em;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.additional_details.no-js {
+    display: block;
+}
+
+.additional_details_no_script_msg {
+  display: none;
+}
+
+.additional_details_no_script_msg.no-js {
+  display: block;
+}
+
+.additional_details_title {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    padding-left: 0.3em;
+    margin-top: 0.5em;
+}
+
+.additional_details_table {
+    border: 1px solid #ccc;
+    margin-bottom: 1em;
+    margin-right: 2em;
+    margin-top: 0.5em;
+    border-spacing: 0.5em;
+}

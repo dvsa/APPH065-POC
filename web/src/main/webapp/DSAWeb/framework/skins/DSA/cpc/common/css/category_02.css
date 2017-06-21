@@ -1,0 +1,93 @@
+/* LEFT NAVIGATION START */
+#leftnav p.guideactivehr {
+	background-image:   url(../images/guide_bottom_02.gif);
+	margin: 0;
+	height:12px;
+	background-color: #ddd;
+}
+#leftnav P.activetheme {
+	background-image:   url(../images/leftnav_bullet_02.gif);
+	padding: 5px 0 5px 10px;
+	font-weight: bold;
+	margin: 0;
+		background-color: #E5EFF5;
+}
+#leftnav P.activethemeandsubtheme {
+	background-image:   url(../images/bullet_02.gif);
+	background-color: #ddd;
+	padding: 5px 0 5px 10px;
+	font-weight: bold;
+	margin: 0;
+}
+#leftnav P.page {
+	background-image:   url(../images/bullet_02.gif);
+	background-color: #ddd;
+	padding: 5px 5px 5px 14px;
+	margin: 0;
+}
+#leftnav P.activepage {
+	background-image:   url(../images/guide_bullet_02.gif);
+	background-color: #ddd;
+	padding: 5px 0 5px 14px;
+	margin: 0;
+	font-weight: bold;
+}
+#leftnav P.subtheme {
+	background-image:   url(../images/bullet_02.gif);
+	background-color: #ddd;
+	padding: 5px 0 5px 14px;
+	margin: 0;
+}
+#leftnav P.subthemeactive {
+	background-image:   url(../images/bullet_02.gif);
+	background-color: #ddd;
+	padding: 10px 5px 5px 14px;
+	font-weight: bold;
+	color: #069;
+	margin: 0;
+}
+/* LEFT NAVIGATION END */
+/*Central heading*/
+#mainNarrow h1, #mainFull h1, #mainWide h1 {
+font-weight:400;}
+#mainNarrow a{color:#069;
+}
+#mainNarrow P.menuitem, #mainFull P.menuitem, #mainWide P.menuitem {
+	background-image:   url(../images/listitem_02.gif);
+}
+/* RIGHT BANNERS START */
+.rightgreen {
+	line-height:normal;
+	width:235px;
+	background-color: #E5EFF5;
+	border-left:3px solid #069;
+	padding: 15px 0 0 0;
+	margin: 0;
+	}
+.rightgreen h2{
+	margin:0px 0px 5px 0px;
+}
+.rightgreen P {
+	padding: 0 0 5px 10px;
+	margin: 0 2px 0 10px;
+}
+.rightgreen P a {
+	color:#069;
+}
+.rightgreen P.listitem, P.menuitem {
+	background-image:   url(../images/listitem_02.gif);
+	background-repeat: no-repeat;
+	padding: 1px 0 3px 15px;	
+	text-decoration:none;
+}
+.rightgreenbottom {
+	padding: 0;
+	margin: 0;
+	background-image:  url(../images/right_banner_bottom_02.gif);
+	background-color:#E5EFF5;
+	background-position:right;
+	background-repeat:no-repeat;
+	border-left:3px solid #069;
+	height: 15px;
+	width: 235px;}
+/* RIGHT BANNERS END */

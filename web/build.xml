@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!--
+   Licensed to the Apache Software Foundation (ASF) under one or more
+   contributor license agreements.  See the NOTICE file distributed with
+   this work for additional information regarding copyright ownership.
+   The ASF licenses this file to You under the Apache License, Version 2.0
+   (the "License"); you may not use this file except in compliance with
+   the License.  You may obtain a copy of the License at
+   
+       http://www.apache.org/licenses/LICENSE-2.0
+   
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+  
+   $Header:$
+ -->
+
+<!--
+  An Ant build file for compiling a Beehive page flow web application.
+-->
+<project name="beehive" default="usage" basedir=".">
+
+    <property environment="os"/>
+
+    <property name="webapp.dir" location="src/main/webapp"/>
+    <property name="classes.dir" location="${project.build.directory}/beehive_generated"/>
+    <property name="web.dir" location="src/main/webapp/"/>
+    <property name="src.dir" location="src/main/java/"/>
+
+    <property name="tmp.sourcegen.dir" value="tmpbeansrc"/>
+
+    <!-- Define the classpath used to build the webapp -->
+    <path id="webapp.classpath"> 
+        <pathelement path="${compile_classpath}"/>
+    </path>    
+
+    <path id="webapp.sourcepath">
+        <pathelement location="${src.dir}"/>
+    </path>
+
+    <target name="build" description="Build the webapp">
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${tmp.sourcegen.dir}"/>
+
+        <!-- Declare a classpath that extends the webapp's usual classpath to add 
+             JARs needed in this classpath in order to process annotations -->
+        <path id="webapp.classpath.ext">
+            <path refid="webapp.classpath"/>
+            <path refid="velocity.dependency.path"/>
+            <path refid="netui-compiler.dependency.path"/>
+        </path>
+        
+        <!-- Declare the APT task -->
+        <taskdef name="apt" 
+                 classname="org.apache.beehive.controls.runtime.generator.AptTask" 
+                 classpathref="webapp.classpath"
+                 onerror="fail"/>
+
+        <!-- Process annotations and compile source files -->
+        <echo>Building application source files</echo>
+        <apt sourcepath="${src.dir}"
+             srcdir="${src.dir}"
+             destdir="${classes.dir}"
+             gendir="${tmp.sourcegen.dir}"
+             classpathref="webapp.classpath"
+             source="1.5"
+             processorOptions="web.content.root=${web.dir}"/>
+    </target>
+</project>

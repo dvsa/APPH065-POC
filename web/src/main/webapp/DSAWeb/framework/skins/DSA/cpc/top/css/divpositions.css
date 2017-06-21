@@ -1,0 +1,107 @@
+/*------------------------------------------------- 
+divpositions.css                               
+
+Used for positioning as per current TOP portal
+These styles are derived from the existing   
+Transport Office Portal style sheets.
+
+Note for Agencies: The absolute positioning used on the TOP
+and therefore in these examples may not be relevant 
+in the context of your portal, please discard or override 
+these rules as appropriate
+          
+Version 2.0 class names prefaced with TOP_ to  
+avoid conflicts with conventions used by other agencies             
+
+Version 3.0 RJHurst rick@olivewoodtech.co.uk 28/01/2008
+- formatted and checked for TOP style guide v3.0 
+- TOP_footer background image rules moved to global.css                 
+------------------------------------------------- */
+
+#TOP_top{ 
+	z-index:1;
+	position:absolute;
+	top:0px;
+	left:0px;
+	width: 100%;
+	height:110px;
+	background-color:white;
+	border:0px solid black;
+	background-image:  url(../images/top_bg.png);
+	background-repeat:repeat-x;
+	padding: 0; margin: 0;
+}
+
+#TOP_logo{ 
+	z-index:2;
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:190px;
+	height:110px;
+}
+
+#TOP_menu{
+	z-index:4;
+	position:absolute;
+	top:125px;
+	left:10px;
+	width:179px;
+	border:0px solid black;
+}
+
+#TOP_topSearch{
+	z-index:5;
+	position:absolute;
+	top:10px;
+	left:590px;
+	height:20px;
+}
+
+#TOP_topMenu{
+	z-index:6;
+	position:absolute;
+	top:10px;
+	left:200px;
+	width:360px;
+	height:20px;
+}
+
+#TOP_topTabMenu{
+	z-index:7;
+	height:23px;
+	position:absolute;
+	top:87px;
+	left:200px;
+	width:570px;	
+}
+
+#TOP_breadcrumb{
+	position:absolute;
+	top:120px;
+	left:200px;
+	width:570px;
+	border-top:3px solid #39c;
+	padding-top:4px;
+}
+
+#TOP_main{
+	position:absolute;
+	top:150px;
+	left:200px;
+	width:570px;
+	padding:0;
+}
+
+#TOP_mainFull{
+	float:left;
+	width:540px;
+	padding-top:0px;
+}
+
+#TOP_footer { 
+	clear:both;
+	width:540px;
+	padding-top:15px;
+	padding-bottom:10px;
+}

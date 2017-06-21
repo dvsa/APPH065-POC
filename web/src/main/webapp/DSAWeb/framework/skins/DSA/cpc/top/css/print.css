@@ -1,0 +1,89 @@
+/*--------------------------------------------
+print.css  - PRINT ONLY STYLES
+
+These styles are derived from the existing 
+Transport Office Portal style sheets but have      
+been prefaced with TOP_ to avoid conflicts with              
+conventions used by other agencies
+
+IMPORTANT - These styles are intended for the printed 
+view only i.e. this style sheet should be linked in using
+the attribute media="print". These styles are not
+intended to be interpreted in normal browser viewing
+
+Version 3.0 RJHurst rick@olivewoodtech.co.uk 28/01/2008 
+- checked and formatted for TOP Style Guide v3.0       
+----------------------------------------------*/
+
+#TOP_top{
+  display:none;
+}
+
+#TOP_logo{
+  display:none;
+}
+
+#TOP_logobottom{
+	display:none;
+}
+
+#TOP_menu{
+	display:none;
+}
+
+#TOP_topSearch{
+	display:none;
+}
+
+#TOP_topMenu{
+	display:none;
+}
+
+#TOP_topTabMenu{
+	display:none;
+}
+
+#TOP_breadcrumb{
+	display:none;
+}
+
+#TOP_main{
+  padding-left:20px;
+  margin:20px 20px 20px 20px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:100%;
+}
+
+#TOP_mainNarrow{
+	width:100%;
+}
+
+#TOP_mainWide{
+	width:100%;
+}
+
+#TOP_mainFull{
+	width:100%;	
+}
+
+#TOP_rightWide{
+	display:none;
+}
+
+#TOP_rightNarrow{
+	display:none;
+}
+
+#TOP_feedback{
+	display:none;
+}
+
+#TOP_pageoptions{
+	display:none;
+}
+
+#TOP_footer {
+	display:none;
+}

@@ -1,0 +1,8 @@
+#TabsDiv, .noprint, .MainMenu, .enabledButton, .disabledButton, .enabledButtonAverage, .enabledButtonLong { display: none }
+#div { float:none; }
+.content-box, #content-box { background-color: #fff; border: none; overflow: none; float:none; }
+.printonly {display:inline;}
+.screenonly {display:none;}
+.workPatternDiv { border:0; background: #ffffff; margin: 0px; padding: 1px; overflow:visible; }
+#problemProgrammesTable{width:650px !important;}
+#frmProgrammesDet_divProblemTC {height:auto !important;overflow:none !important;}

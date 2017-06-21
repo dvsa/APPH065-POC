@@ -1,0 +1,62 @@
+/*
+// --------------------------------------------------------------------------------------------------------------------
+// Layouts
+// --------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+.bea-portal-layout, .bea-portal-layout-grid, .bea-portal-layout-border, .bea-portal-layout-flow
+{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bea-portal-layout-placeholder-container
+{
+    padding: 0px;
+    margin: 0px;
+    vertical-align: top;
+}
+
+.bea-portal-layout-placeholder
+{
+    padding: 0px;
+    margin: 0px;
+}
+.bea-portal-layout-placeholder-container-east, .bea-portal-layout-placeholder-container-west, .bea-portal-layout-placeholder-container-north, .bea-portal-layout-placeholder-container-south, .bea-portal-layout-placeholder-container-center
+{
+    padding: 0px;
+    margin: 0px;
+    vertical-align: top;
+}
+#leftnav {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 166px; COLOR: #000; PADDING-TOP: 0px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+#leftnav {
+	WIDTH: 160px; voice-family: inherit
+}
+UNKNOWN {
+	WIDTH: auto
+}
+#leftnav UL {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0px; BORDER-TOP: medium none; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-TOP: 0px; BORDER-BOTTOM: medium none; LIST-STYLE-TYPE: none
+}
+#leftnav LI {
+	MARGIN: 2px 2px 2px 0px; BORDER-LEFT: #cfc3df 10px solid; LIST-STYLE-TYPE: none
+}
+#leftnav LI A {
+	PADDING-RIGHT: 5px; DISPLAY: block; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: middle; WIDTH: 100%; COLOR: #333333; PADDING-TOP: 5px; BACKGROUND-COLOR: #fff; TEXT-DECORATION: none
+}
+#leftnav LI A.nestedlink {
+	padding-left:20px; width:137px;
+	padding-right:2px
+}
+#leftnav LI A.twicenestedlink {
+	padding-left:35px; width:122px;
+	padding-right:2px
+}
+#leftnav LI A:hover {
+	COLOR: #fff; BACKGROUND-COLOR: #d6cde4
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>Capita</groupId>
+    <artifactId>APPH065</artifactId>
+    <version>0.1</version>
+    <packaging>pom</packaging>
+    <name>APPH065 project</name>
+
+    <modules>
+        <module>jaxb</module>
+        <module>web</module>
+        <module>service</module>
+    </modules>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.wildfly.plugins</groupId>
+                    <artifactId>wildfly-maven-plugin</artifactId>
+                    <version>1.2.0.Alpha2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

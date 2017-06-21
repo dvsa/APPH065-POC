@@ -1,0 +1,371 @@
+/*----------------------------------------------
+global.css
+
+Created specifically for the TOP style guide and
+contains styles to be used throughout the style guide 
+which are not found on the current TOP. Some of these rules
+may override styles found in the files commonstyle.css,
+divpositions.css, forms.css, full_width.css, so this
+file should be linked after those mentioned above, to
+give the CSS higher precedence.
+
+version 1.0 RJHurst rick@olivewoodtech.co.uk 14/09/2007                  
+version 2.0 RJHurst rick@olivewoodtech.co.uk 10/01/2008
+version 3.0 RJHurst rick@olivewoodtech.co.uk 28/01/2008 
+- checked and formatted for TOP style guide 
+- inserted TOP_footer rules relocated from divpositions.css   
+------------------------------------------------*/
+
+#TOP_mainWide h1{
+	font-weight:400;
+}
+
+#TOP_masthead {
+	position:absolute;
+	top:120px;
+	left:200px;
+	width:570px;
+	border-top:3px solid #39c;
+	padding-top:4px;
+}
+
+#TOP_footer {
+  background-image:  url(../images/grey_dotted_line_x.gif);
+	background-repeat:repeat-x;
+}
+
+
+.TOP_clear {
+	clear:both;
+}
+
+.TOP_clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.TOP_clearfix {
+    display: inline-block;
+
+}
+
+.TOP_formField .TOP_clearfix {
+   padding:1px; /* for firefox 1.5 */
+}
+
+html[xmlns] .TOP_clearfix {
+    display: block;
+}
+
+* html .TOP_clearfix {
+    height: 1%;
+}
+
+
+/*-----------------------------------*/
+/* Forms general */
+
+fieldset {
+	border:none;
+	margin:0;
+	padding:0;
+}
+
+table.TOP_form { /* assumes the table is constrained by another element*/ 
+	width:100%;
+}
+
+table.TOP_form td {
+	padding:5px;
+}
+
+table.TOP_form td.TOP_labelCol {
+	width:155px;
+}
+
+table.TOP_form td.TOP_labelColUseCard {
+    width:140px;
+}
+
+table.TOP_form td.TOP_labelColTxHistoriesUser {
+	width:75px;
+}
+
+table.TOP_form td.TOP_labelColTxHistoriesIPAddress {
+	width:90px;
+}
+
+table.TOP_form td.TOP_labelColTxHistoriesDate {
+	width:130px;
+}
+
+table.TOP_form td.TOP_labelColTxHistoriesMessage {
+	width:325px;
+}
+
+/** 
+ * We have this in here as part of a fix to IE8-17 and CPCER-1198. (This is only an Issue in TARS). 
+ * The Equivalent style in CPC is left empty.
+ */ 
+table.TOP_form td.TOP_labelColDeleOrderCandidateName {
+    white-space: normal; width:35px;
+}
+table.TOP_form td.TOP_colBreakWord {
+    word-wrap: break-word; /* IE */
+    word-break:break-all;
+}
+
+/* In the Delegated Order Screens, there is a scrollable (left right) option for when the width is too big.
+   This is overriding the issue highlighted so the scroll bar does not appear.  */ 
+.TOP_divScrollable{
+	
+}
+
+
+table.TOP_form td.TOP_label {
+	vertical-align:top;
+}
+
+.TOP_mandatory {
+	color:#FF0000;
+}
+
+
+
+.TOP_formElement {
+	/*border:1px solid #ccc;*/
+	margin:0;
+	padding:0;
+}
+
+.TOP_formLabel {
+	font-weight:bold;
+}
+
+.TOP_formField .TOP_odd {
+	background-color:#ccc;
+	/*padding:3px;*/
+}
+
+.TOP_formField .TOP_even {
+	background-color:#eee;
+	/*padding:3px;*/
+}
+
+.TOP_formButtons {
+	margin-top:5px;
+}
+
+.TOP_formButtons .TOP_center,
+.TOP_formButtons .TOP_left,
+.TOP_formButtons .TOP_right
+{
+	float: left;
+	width:33.3%;
+	min-width:33.3%; /* for IE 7 */
+}
+
+.TOP_formButtons .TOP_center
+{
+	text-align: center;
+}
+
+.TOP_formButtons .TOP_right
+{
+	text-align: right;
+}
+
+.TOP_formButtons .TOP_full {
+	text-align: center;
+}
+
+.TOP_formHelpTip {
+  margin-bottom:10px;
+}
+
+legend.TOP_accessText {
+	display:none;
+}
+
+
+.TOP_offScreen { 
+  position:absolute;
+  left:0px;
+  top:-9999px;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+.TOP_tableOption2 th {
+	text-align:left;
+	vertical-align:top;
+	padding:3px;
+}
+
+.TOP_tableOption2 td {
+	padding:3px;
+}
+
+.TOP_tableOption2 caption {
+	text-align:left;
+	padding:3px;
+}
+
+table.TOP_listing {
+  border-top:1px solid #ccc;
+  border-left:1px solid #ccc;
+  border-collapse:collapse;
+}
+
+table.TOP_listing th,
+table.TOP_listing td {
+  border-right:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  padding:5px;
+  text-align:left;
+}
+
+/*-----------------------------------*/
+/* for radio button and checkbox 
+/* collections where two columns are 
+/* required                          */
+
+.TOP_fieldCol1 {
+  float:left;
+  margin-right:10px;
+  width:160px;
+}
+
+
+.TOP_fieldCol2 {
+  float:left;
+  width:160px;
+}
+
+
+.TOP_formField .TOP_checkBoxContainer {
+  float:left;
+  width:20px;
+  min-width:20px;
+  padding:5px 0 5px 3px;
+  display:block;
+}
+
+.TOP_formField  input.TOP_radio {
+  float:left;
+  display:block;
+}
+
+.TOP_formField input.TOP_checkbox {
+  float:right;
+  display:block;
+  margin:5px;
+}
+
+.TOP_formField label.TOP_leftaligned {
+  float:left;
+  display:block;
+  width:90%;
+  margin:5px;
+}
+
+.TOP_formField div {
+  line-height:20px;
+  min-width:100%;/* for IE 7 */
+}
+
+.TOP_fieldLabelHeadings {
+  margin-left:20px;
+  font-weight:bold;
+}
+
+span.TOP_labelPart {
+  display:block;
+  float:left;
+  margin-top:5px;
+
+} 
+
+/*-----------------------------------*/
+/* specific to example               */
+span.TOP_labelStation {
+  width:150px;
+  padding-left:5px;
+}
+
+span.TOP_labelTime {
+  width:75px;
+}
+
+/*-----------------------------------*/
+/* search results                    */
+
+.TOP_pager {
+	background:#e5e5e5;
+	padding:5px;
+	margin-bottom:5px;
+}
+
+.TOP_resultLink,
+.TOP_resultTitle {
+	font-weight:bold;
+}
+
+.TOP_resultTitle {
+	margin-bottom:5px;
+}
+
+.TOP_searchResults ol {
+  font-weight:bold;
+}
+
+.TOP_searchResults .TOP_resultDetails ul {
+  list-style:none;
+  font-weight:normal;
+}
+
+.TOP_searchResults .TOP_resultRelated a {
+  font-weight:normal !important;
+  font-size:x-small;
+}
+
+.TOP_searchResults .TOP_resultURL .TOP_resultLabel {
+  font-weight:bold;
+}
+
+.TOP_summaryResults ol li div.TOP_resultSummary {
+  font-weight:normal;
+}
+
+/*-----------------------------------*/
+/* powered by                        */
+
+#TOP_poweredBy {
+	float:right;
+	margin:0 0 10px 10px;
+}
+
+#TOP_poweredBy span {
+	display:block;
+}
+
+/*-----------------------------------*/
+/* Form Alert                        */
+#TOP_formAlert{
+  border:solid 1px red;
+  color: red;
+  padding-left:10px;
+}
+
+/*-----------------------------------*/
+/* Help Icon                         */
+.TOP_helpIcon {
+  font-weight:bold;
+  color:#006699;
+}
+

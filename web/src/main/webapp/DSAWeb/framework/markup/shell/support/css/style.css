@@ -1,0 +1,119 @@
+/*For invalid messages*/
+.invalid-message{
+	FONT-SIZE: 70%; font-weight: bold; font-family:Verdana, Arial, Helvetica, sans-serif; COLOR: RED;
+}
+/*For user input in form*/
+.user-input{
+	FONT-SIZE: 80%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal
+}
+/*For check box*/
+.checkB { 
+   height: 10px; width: 10px;
+} 
+/*For field header*/
+.field-header{
+	FONT-SIZE: 85%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal;font-weight: bold
+}
+/*For sub title header*/
+.subtitle-header{
+	FONT-SIZE: 80%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal;font-weight: bold
+}
+/*For field label*/
+.field-label{
+	FONT-SIZE: 80%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal
+}
+/*For field instruction*/
+.field-instruction{
+	FONT-SIZE: 70%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal
+}
+/*For table header*/
+.table-header{
+	FONT-SIZE: 80%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal;font-weight: bold;color: #FFFFFF;background-color:#9966CC
+}
+/*For messages*/
+.message{
+	FONT-SIZE: 80%; font-weight: bold; font-family:Verdana, Arial, Helvetica, sans-serif; COLOR: RED;
+}
+.light-message{
+	FONT-SIZE: 80%; font-family:Verdana, Arial, Helvetica, sans-serif; COLOR: RED;
+}
+/*For button labels*/
+.button-label{
+	FONT-SIZE: 80%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal
+}
+/*For mandatory fields for asterik*/
+.mandatory-field{
+	color: #FF0000
+}
+/*For hyperlink label*/
+.hyperlink-label{
+	FONT-SIZE: 80%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal; font-weight: bold
+}
+
+/*For user input in form*/
+.form-field{
+	FONT-SIZE: 80%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal
+}
+
+/*Update message*/
+.updt-heading
+{
+FONT-SIZE: 90%; MARGIN: 2px; voice-family: inherit; font-weight: bold; font-family:Arial,Helvetica,sans-serif; COLOR: RED;
+}
+/*For light tables*/
+.table-light{
+	FONT-SIZE: 80%; font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal;font-weight: bold;color: #FFFFFF;background-color: #D4C2D9
+}
+
+/*For link*/
+pagelink:link{
+font-weight: normal;
+color: #0033FF;
+text-decoration: none
+}
+/*For visited link*/
+pagelink:visited{
+font-weight: normal;
+color: #990000;
+text-decoration: none
+}
+/*For link hovering*/
+pagelink:hover{
+font-weight: bold;
+color: #FF0000;
+text-decoration: none;
+}
+/*For link active*/
+pagelink:active{
+font-weight: bold;
+color: #FF0000;
+text-decoration: none;
+}
+
+/* back groung colors */
+.bgaltgray{background-color:#EBEBEB;}
+.bgbeige{background-color:#DFDFAB;}
+.bgblack{background-color:#000000;}
+.bgblue{background-color:#00235D;}
+.bgbluelight{background-color:#AACFDE;}
+.bgbrown{background-color:#5a300f;}
+.bgceladon{background-color:#a5c481;}
+.bgcellight{background-color:#DBEBC6;}
+.bgcelmedium{background-color:#c7ddad;}
+.bgcoolgray{background-color:#dddddd;}
+.bggold{background-color:#f9b40d;}
+.bggoldlight{background-color:#FFFF99;}
+.bggreen{background-color:#005943;}
+.bglightgreen{background-color:#A7AC6D;}
+.bggray{background-color:#666666;}
+.bgolive{background-color:#666633;}
+.bgorange{background-color:#dd761a;}
+.bgorlight{background-color:#FFEFB4;}
+.bgormedium{background-color:#f69a10;}
+.bgpurple{background-color:#5a126c;}
+.bgpurplelight{background-color:#D4C2D9;}
+.bgpurplemedium{background-color:#8B5998;}
+.bgred{background-color:#A80019;}
+.bgyellow{background-color:#DBDB56;}
+.bgirdt{background-color:#a08dc3;}
+.bgwhite{background-color:#ffffff;}

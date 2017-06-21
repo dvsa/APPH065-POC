@@ -1,0 +1,75 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 1em; BACKGROUND: url(../navimages/dsalogo.png) no-repeat center top; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #333; PADDING-TOP: 150px; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif
+}
+H1 {
+	COLOR: #333
+}
+H2 {
+	COLOR: #333
+}
+H3 {
+	COLOR: #333
+}
+H4 {
+	COLOR: #333
+}
+H5 {
+	COLOR: #333
+}
+H6 {
+	COLOR: #333
+}
+H1 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-WEIGHT: normal; FONT-SIZE: 1em; PADDING-BOTTOM: 3px; MARGIN: 0px; PADDING-TOP: 3px
+}
+H2 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-WEIGHT: normal; FONT-SIZE: 0.85em; PADDING-BOTTOM: 3px; MARGIN: 0px; PADDING-TOP: 3px
+}
+H4 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-WEIGHT: normal; FONT-SIZE: 0.85em; PADDING-BOTTOM: 3px; MARGIN: 0px; PADDING-TOP: 3px
+}
+H5 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-WEIGHT: normal; FONT-SIZE: 0.75em; PADDING-BOTTOM: 3px; MARGIN: 0px; PADDING-TOP: 3px
+}
+H6 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-WEIGHT: normal; FONT-SIZE: 0.65em; PADDING-BOTTOM: 3px; MARGIN: 0px; PADDING-TOP: 3px
+}
+#accessibility {
+	DISPLAY: none
+}
+#sidebar-a {
+	DISPLAY: none
+}
+#sidebar-b {
+	DISPLAY: none
+}
+#leftnav {
+	DISPLAY: none
+}
+#credits {
+	DISPLAY: none
+}
+#footer {
+	DISPLAY: none
+}
+#header-date {
+	DISPLAY: none
+}
+#header-logos {
+	DISPLAY: none
+}
+#accessibilitynav {
+	DISPLAY: none
+}
+#primarynav {
+	DISPLAY: none
+}
+#searchdsa {
+	DISPLAY: none
+}
+.hide {
+	DISPLAY: none
+}
+.header {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-WEIGHT: bold; PADDING-BOTTOM: 4px; MARGIN: 0px; WIDTH: 188px; COLOR: #fff; PADDING-TOP: 4px; BACKGROUND-COLOR: #000
+}

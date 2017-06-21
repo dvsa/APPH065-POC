@@ -1,0 +1,72 @@
+
+/*Central heading*/
+#mainNarrow h1{color:#9c3;
+font-weight:400;
+}
+/* RIGHT BANNERS START */
+.rightgreen {
+	line-height:normal;
+	width:235px;
+	background-color: #EEEEEE;
+	border-left:3px solid #9c3;
+	padding: 15px 0 0 0;
+	margin: 0;	
+	}
+.rightgreen h2{
+	font-size:1.1em;
+	margin:0px 0px 5px 0px;
+}
+.rightgreen strong, .rightgreen B {
+	color:#333;
+}
+.rightgreen p.hr {
+	margin-top: 6px;
+	padding-top: 5px;
+	font-size: 1px;
+	height: 1px;
+	background-image:   url(../images/right_hr.gif);
+	background-repeat: no-repeat;
+	line-height:normal;
+}
+.rightgreen p.hrDotted {
+	margin-top: 3px;
+	font-size: 1px;
+	height: 1px;
+	background-image:  url(../images/dotted_line_170px.gif);
+	background-repeat: no-repeat;
+	line-height:normal;
+}
+.rightgreen P {
+	padding: 0 0 5px 10px;
+	margin: 0 2px 0 10px;
+}
+.rightgreen P.listitem, P.menuitem {
+	background-image:   url(../images/listitem.gif);
+	background-repeat: no-repeat;
+	padding: 1px 0 3 15px;	
+	text-decoration:none;
+}
+.rightgreen a {
+	color:#069;
+	text-decoration:none;
+}
+.rightgreen a strong {
+	color:#069;
+	text-decoration:none;
+}
+.rightgreen a:hover {
+	text-decoration:underline;
+}
+.rightgreenbottom {
+	padding: 0;
+	margin: 0;
+	background-image:  url(../images/right_banner_bottom.gif);
+	background-color:#EEEEEE;
+	background-position:right;
+	background-repeat:no-repeat;
+	border-left:3px solid #9c3;
+	height: 15px;
+	width: 235px;
+	overflow: hidden;
+}
+/* RIGHT BANNERS END */
