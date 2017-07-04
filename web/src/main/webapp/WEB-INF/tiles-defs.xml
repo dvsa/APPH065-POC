@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE struts-config PUBLIC
-    "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
-    "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+    "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
 
 <tiles-definitions>
     <definition name="defaultLayout" template="/layouts/template.jsp">
+    </definition>
+
+    <definition name="testCategory1/vehicleType/index" extends="defaultLayout">
+        <put name="title" value="Index" />
+        <put name="body" value="/testCategory1/vehicleType/welcome.jsp" />
+    </definition>
+
+    <definition name="testCategory1/vehicleType/vehicleType" extends="defaultLayout">
+        <put name="title" value="Vehicle Type" />
+        <put name="body" value="/testCategory1/vehicleType/vehicleType.jsp" />
+    </definition>
+
+    <definition name="testCategory1/vehicleType/updateVT" extends="defaultLayout">
+        <put name="title" value="Update Vehicle Type" />
+        <put name="body" value="/testCategory1/vehicleType/updateVT.jsp" />
+    </definition>
+
+    <definition name="testCategory1/vehicleType/addVT" extends="defaultLayout">
+        <put name="title" value="Add Vehicle Type" />
+        <put name="body" value="/testCategory1/vehicleType/addVT.jsp" />
+    </definition>
+
+    <definition name="testCategory1/vehicleType/acessDtls" extends="defaultLayout">
+        <put name="title" value="Access Details" />
+        <put name="body" value="/testCategory1/vehicleType/acessDtls.jsp" />
     </definition>
 
     <definition name="test/page1" extends="defaultLayout">
