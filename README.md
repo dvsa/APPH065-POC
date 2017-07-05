@@ -33,6 +33,7 @@ mvn wildfly:start wildfly:execute-commands
 mvn install
 ```
 **Note:** this will build and deploy the PoC application
+
 3. Using a browser, access the [PoC application URL](https://localhost:8443/APPH065-web-0.1)
 4. Click on the '**Test Category -> Vehicle Types**' menu item
 
