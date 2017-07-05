@@ -347,7 +347,7 @@ LEGEND {
 	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; FONT-WEIGHT: bold; PADDING-BOTTOM: 0.5em; MARGIN: 0px; COLOR: #333; PADDING-TOP: 0.5em
 }
 LABEL {
-	DISPLAY: block; FONT-WEIGHT: normal; COLOR: #7d7eb6
+	DISPLAY: inline; FONT-WEIGHT: normal; COLOR: #7d7eb6
 }
 #fm-submit {
 	CLEAR: both; PADDING-TOP: 1em

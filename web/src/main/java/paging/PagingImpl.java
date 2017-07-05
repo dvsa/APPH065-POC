@@ -10,6 +10,9 @@ import java.util.Set;
 
 import com.DSA.common.valueobject.VOPaging;
 
+//PP Commented for POC
+//import com.bea.control.ControlSource;
+
 public class PagingImpl implements Paging
 {   
     /**
@@ -108,8 +111,7 @@ public class PagingImpl implements Paging
      */
     public VOPaging[] genPage() {
     	
-    	System.out.println(startRec + ":" + totalRec + ":" + pageSize);
-        int intStartRec = Integer.parseInt(startRec);
+    	int intStartRec = Integer.parseInt(startRec);
         ArrayList arrList = new ArrayList();
         VOPaging retVO = null;
         int maxPages = 10;
@@ -122,11 +124,8 @@ public class PagingImpl implements Paging
         int endPage = (totalPages > maxPages) ? maxPages : totalPages;
         /* CHECKSTYLE-ON */
         
-        System.out.println("totalPages" + totalPages + ":" + "maxPages" + ":" + maxPages);
-        
         if (totalPages > maxPages && currPage > (pageSize / 2)) {
-        	System.out.println("|||" );
-            startPage = currPage - ((pageSize / 2) - 1);
+        	startPage = currPage - ((pageSize / 2) - 1);
             endPage =  startPage + maxPages - 1;
             /* CHECKSTYLE-OFF */
             endPage = (endPage >= totalPages) ? totalPages : endPage;
@@ -135,23 +134,16 @@ public class PagingImpl implements Paging
             if (diff < 10) { startPage -= 10 - diff; }
             newStartRec = ((startPage - 1) * pageSize) + 1;
             newEndRec = newStartRec + pageSize - 1;
-            
-            System.out.println("newStartRec" + newStartRec + ":" + "newEndRec" + ":" + newEndRec);
         }
-        
-        System.out.println("totalPages :" + totalPages);
-        System.out.println("startPage" + startPage + ":" + "endPage" + ":" + endPage);
         
         if (totalPages > 1) {
             for (int i = startPage; i <= endPage; i++) {
                 retVO = new VOPaging();
                 if (i == currPage) {
-                	System.out.println("currPage");
-                    retVO.setIsLabel("YES");
+                	retVO.setIsLabel("YES");
                     retVO.setDisplayText(String.valueOf(i));
                 } else {
-                	System.out.println("not currPage");
-                    retVO.setDisplayText(String.valueOf(i));
+                	retVO.setDisplayText(String.valueOf(i));
                     retVO.setStartRec(String.valueOf(newStartRec));
                     retVO.setEndRec(String.valueOf(newEndRec));
                 }
@@ -165,9 +157,6 @@ public class PagingImpl implements Paging
         }
         VOPaging[] retArr = new VOPaging[arrList.size()];
         arrList.toArray(retArr);
-        
-        System.out.println("arrList :" + arrList.size());
-        
         return retArr;
     }
 

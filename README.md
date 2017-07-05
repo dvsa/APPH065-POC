@@ -33,7 +33,8 @@ mvn wildfly:start wildfly:execute-commands
 mvn install
 ```
 **Note:** this will build and deploy the PoC application
-3. Using a browser, access the [PoC application URL](https://localhost:8443/APPH065-web-0.1/test/begin.do)
+3. Using a browser, access the [PoC application URL](https://localhost:8443/APPH065-web-0.1)
+4. Click on the '**Test Category -> Vehicle Types**' menu item
 
 ### Stopping the wildfly server
 1. Using a command-prompt, change directory to the **'wildfly'** directory

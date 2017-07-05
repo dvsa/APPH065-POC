@@ -665,6 +665,7 @@ public class VehicleTypeController extends TarsPageFlowController {
     /**
      * Comment for pageSize represents the page size.
      */
+    // PP - Modified pageSize for POC
     private int pageSize = 8;
 
     /**
@@ -1052,9 +1053,7 @@ public class VehicleTypeController extends TarsPageFlowController {
         //if (arrVehicleTypeVO[0] != null && !arrVehicleTypeVO[0].ErrorFlag()) {
         VehicleTypeVO[] arrVehicleTypeVO = getVehicleTypeVOList(form);
         if (arrVehicleTypeVO[0] != null && !arrVehicleTypeVO[0].getErrorFlag()) {
-        	System.out.println(form.getCodeLabel() + " FORM "+form.getDescription());
-        	System.out.println(arrVehicleTypeVO[0].getCodeLabel() + " - "+arrVehicleTypeVO[0].getErrorFlag());
-        //PP Modified for POC ****** End
+        	//PP Modified for POC ****** End
             searchResultFlag = "Y";
             pgfArrVehicleTypeVO = arrVehicleTypeVO;
             int iLength = pgfArrVehicleTypeVO.length;
@@ -1102,7 +1101,6 @@ public class VehicleTypeController extends TarsPageFlowController {
     	)
     protected Forward begin() {
     	
-    	paging = new PagingImpl();
     	setURL();
         //PP Commented for POC
 /*    	
@@ -1112,7 +1110,7 @@ public class VehicleTypeController extends TarsPageFlowController {
         	return new Forward("showVT");
         else return new Forward("success");
 */        
-    	return new Forward("showVT");
+    	return new Forward("success");
      }
 
     /**
@@ -1169,7 +1167,11 @@ public class VehicleTypeController extends TarsPageFlowController {
      * @return void
      */
     private void setVtPaginationParam() {
-        HashMap addParam = new HashMap();
+    	
+    	//PP - Paging instantiated for POC
+    	paging = new PagingImpl();
+    	
+    	HashMap addParam = new HashMap();
         //FOR PAGINATION:
         if (searchResultFlag.equalsIgnoreCase("Y")) {
             iTotalRec = Integer.parseInt(pgfArrVehicleTypeVO[0].getTotalRec());            
@@ -1266,7 +1268,7 @@ public class VehicleTypeController extends TarsPageFlowController {
     @Jpf.Action(
     		forwards= {
     				@Jpf.Forward(name="updateVT", tilesDefinition="testCategory1/vehicleType/updateVT"),
-    				@Jpf.Forward(name="fail", path="testCategory1/vehicleType/vehicleType")
+    				@Jpf.Forward(name="fail", tilesDefinition="testCategory1/vehicleType/vehicleType")
     		}
     	)
     protected Forward showUpdateVT(VTForm form) {
@@ -1445,16 +1447,11 @@ public class VehicleTypeController extends TarsPageFlowController {
         vehicleTypeVO.setExamSkillThreshold(vehTypeVO.getExamSkillThreshold());
         vehicleTypeVO.setForwardTbWeeks(vehTypeVO.getForwardTbWeeks());
         vehicleTypeVO.setTbContingency(Integer.valueOf(vehTypeVO.getTbContingency()));
-        
-        /*String tbContingency = "1";
-        if (tbContingency != null) {
-            vehicleTypeVO.setTbContingency(Integer.valueOf(tbContingency));
-        }*/
-        
-        vehicleTypeVO.setCreatedBy("CREATED_BY");
-        vehicleTypeVO.setCreatedDate("CREATED_ON");
-        vehicleTypeVO.setUpdatedBy("UPDATED_BY");
-        vehicleTypeVO.setUpdatedDate("UPDATED_ON");
+
+        vehicleTypeVO.setCreatedBy("U1");
+        vehicleTypeVO.setCreatedDate("12/06/16");
+        vehicleTypeVO.setUpdatedBy("U1");
+        vehicleTypeVO.setUpdatedDate("12/06/16");
         vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
         
         for (int i = 0; i < pgfArrVehicleTypeVO.length; i++) 
@@ -1492,15 +1489,10 @@ public class VehicleTypeController extends TarsPageFlowController {
         vehicleTypeVO.setForwardTbWeeks(form.getTbWeeks());
         vehicleTypeVO.setTbContingency(Integer.valueOf(form.getTbContingency()));
         
-        /*String tbContingency = "1";
-        if (tbContingency != null) {
-            vehicleTypeVO.setTbContingency(Integer.valueOf(tbContingency));
-        }*/
-        
-        vehicleTypeVO.setCreatedBy("CREATED_BY");
-        vehicleTypeVO.setCreatedDate("CREATED_ON");
-        vehicleTypeVO.setUpdatedBy("UPDATED_BY");
-        vehicleTypeVO.setUpdatedDate("UPDATED_ON");
+        vehicleTypeVO.setCreatedBy("U1");
+        vehicleTypeVO.setCreatedDate("12/06/16");
+        vehicleTypeVO.setUpdatedBy("U1");
+        vehicleTypeVO.setUpdatedDate("12/06/16");
         vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
         vecVehicleTypes.add(vehicleTypeVO);
 
@@ -1526,101 +1518,284 @@ public class VehicleTypeController extends TarsPageFlowController {
     private VehicleTypeVO[] getVehicleTypeVO(String[] arrPagination) {
     	VehicleTypeVO vehicleTypeVO = new VehicleTypeVO();
         VehicleTypeVO[] arrVehicleTypeVO = null;
-        Vector vecVehicleTypes = new Vector(1, 1);
+        java.util.List<VehicleTypeVO> vecVehicleTypes = new java.util.ArrayList<VehicleTypeVO>();
         
-        vehicleTypeVO.setTotalRec("3");        
-        vehicleTypeVO.setCodeLabel("A1");
-        vehicleTypeVO.setDescription("ADI1");
-        vehicleTypeVO.setMaxSingleTBPct("40");
-        vehicleTypeVO.setMaxAllTBPct("40");
-        vehicleTypeVO.setDefaultType("No");
-        vehicleTypeVO.setExamSkillThreshold("120");
+        vehicleTypeVO.setTotalRec("14");        
+        vehicleTypeVO.setCodeLabel("A2");
+        vehicleTypeVO.setDescription("ADI2");
+        vehicleTypeVO.setMaxAllTBPct("0");
+        vehicleTypeVO.setMaxSingleTBPct("0");
         vehicleTypeVO.setForwardTbWeeks("10");
-        vehicleTypeVO.setTbContingency(2);      
+        vehicleTypeVO.setExamSkillThreshold("120");
+        vehicleTypeVO.setTbContingency(0);      
+        vehicleTypeVO.setDefaultType("0");
         vehicleTypeVO.setCreatedBy("U1");
         vehicleTypeVO.setCreatedDate("12/06/16");
         vehicleTypeVO.setUpdatedBy("U1");
         vehicleTypeVO.setUpdatedDate("12/06/16");
         vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
-        vehicleTypeVO.setStartRec("1");
-        vehicleTypeVO.setEndRec("2");
+        vehicleTypeVO.setStartRec(null);
+        vehicleTypeVO.setEndRec(null);
         vecVehicleTypes.add(vehicleTypeVO);
-        
-        vehicleTypeVO = new VehicleTypeVO();
-        vehicleTypeVO.setTotalRec("3");        
-        vehicleTypeVO.setCodeLabel("A2");
-        vehicleTypeVO.setDescription("ADI2");
-        vehicleTypeVO.setMaxSingleTBPct("30");
-        vehicleTypeVO.setMaxAllTBPct("30");
-        vehicleTypeVO.setDefaultType("No");
-        vehicleTypeVO.setExamSkillThreshold("120");
+       
+    	vehicleTypeVO = new VehicleTypeVO();
+        vehicleTypeVO.setTotalRec("14");        
+        vehicleTypeVO.setCodeLabel("A3");
+        vehicleTypeVO.setDescription("ADI3");
+        vehicleTypeVO.setMaxAllTBPct("0");
+        vehicleTypeVO.setMaxSingleTBPct("0");
         vehicleTypeVO.setForwardTbWeeks("10");
-        vehicleTypeVO.setTbContingency(2);      
-        vehicleTypeVO.setCreatedBy("U2");
+        vehicleTypeVO.setExamSkillThreshold("120");
+        vehicleTypeVO.setTbContingency(0);      
+        vehicleTypeVO.setDefaultType("0");
+        vehicleTypeVO.setCreatedBy("U1");
         vehicleTypeVO.setCreatedDate("12/06/16");
-        vehicleTypeVO.setUpdatedBy("U2");
+        vehicleTypeVO.setUpdatedBy("U1");
         vehicleTypeVO.setUpdatedDate("12/06/16");
         vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
-        vehicleTypeVO.setStartRec("1");
-        vehicleTypeVO.setEndRec("2");
-        vecVehicleTypes.add(vehicleTypeVO);     
-        
-        /*
-        vehicleTypeVO = new VehicleTypeVO();
-        vehicleTypeVO.setTotalRec("3");        
-        vehicleTypeVO.setCodeLabel("CLavelX");
-        vehicleTypeVO.setDescription("DescX");
-        vehicleTypeVO.setMaxSingleTBPct("setMaxSingleTBPctX");
-        vehicleTypeVO.setMaxAllTBPct("setMaxAllTBPctX");
-        vehicleTypeVO.setDefaultType("2");
-        vehicleTypeVO.setExamSkillThreshold("setExamSkillThresholdX");
-        vehicleTypeVO.setForwardTbWeeks("setForwardTbWeeksX");
-        vehicleTypeVO.setTbContingency(3);      
-        vehicleTypeVO.setCreatedBy("BJ1X5");
-        vehicleTypeVO.setCreatedDate("12/06/16");
-        vehicleTypeVO.setUpdatedBy("BJX1X");
-        vehicleTypeVO.setUpdatedDate("12/06/16");
-        vehicleTypeVO.setStartRec("3");
-        vehicleTypeVO.setEndRec("3");
-        
-        vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
-        vecVehicleTypes.add(vehicleTypeVO);           
-        */
-		//==
-        arrVehicleTypeVO = new VehicleTypeVO[vecVehicleTypes.size()];
-        vecVehicleTypes.toArray(arrVehicleTypeVO);
-        return arrVehicleTypeVO;
-    	/*VehicleTypeVO vehicleTypeVO = null;
-        VehicleTypeVO[] arrVehicleTypeVO = null;
-        Vector vecVehicleTypes = new Vector(1, 1);
-        
-        vehicleTypeVO = new VehicleTypeVO();
-        if (arrPagination != null && arrPagination[0] != null) {
-            vehicleTypeVO.setTotalRec("1");
-        }
-        vehicleTypeVO.setCodeLabel("VEHICLE_TYPE_CODE");
-        vehicleTypeVO.setDescription("VEHICLE_TYPE_DESC");
-        vehicleTypeVO.setMaxSingleTBPct("MAX_SINGLE_TB_PERCENT");
-        vehicleTypeVO.setMaxAllTBPct("MAX_ALL_TB_PERCENT");
-        vehicleTypeVO.setDefaultType("DEFAULT_TYPE");
-        vehicleTypeVO.setExamSkillThreshold("SKILL_THRESHOLD_DAYS");
-        vehicleTypeVO.setForwardTbWeeks("FORWARD_TB_WEEKS");
-        
-        String tbContingency = "1";
-        if (tbContingency != null) {
-            vehicleTypeVO.setTbContingency(Integer.valueOf(tbContingency));
-        }
-        
-        vehicleTypeVO.setCreatedBy("CREATED_BY");
-        vehicleTypeVO.setCreatedDate("CREATED_ON");
-        vehicleTypeVO.setUpdatedBy("UPDATED_BY");
-        vehicleTypeVO.setUpdatedDate("UPDATED_ON");
-        vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
+        vehicleTypeVO.setStartRec(null);
+        vehicleTypeVO.setEndRec(null);
         vecVehicleTypes.add(vehicleTypeVO);
+
+    	vehicleTypeVO = new VehicleTypeVO();
+        vehicleTypeVO.setTotalRec("14");        
+        vehicleTypeVO.setCodeLabel("B");
+        vehicleTypeVO.setDescription("Bike");
+        vehicleTypeVO.setMaxAllTBPct("90");
+        vehicleTypeVO.setMaxSingleTBPct("40");
+        vehicleTypeVO.setForwardTbWeeks("10");
+        vehicleTypeVO.setExamSkillThreshold("120");
+        vehicleTypeVO.setTbContingency(0);      
+        vehicleTypeVO.setDefaultType("0");
+        vehicleTypeVO.setCreatedBy("U1");
+        vehicleTypeVO.setCreatedDate("12/06/16");
+        vehicleTypeVO.setUpdatedBy("U1");
+        vehicleTypeVO.setUpdatedDate("12/06/16");
+        vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
+        vehicleTypeVO.setStartRec(null);
+        vehicleTypeVO.setEndRec(null);
+        vecVehicleTypes.add(vehicleTypeVO);
+
+    	vehicleTypeVO = new VehicleTypeVO();
+        vehicleTypeVO.setTotalRec("14");        
+        vehicleTypeVO.setCodeLabel("B1");
+        vehicleTypeVO.setDescription("M1 Bike");
+        vehicleTypeVO.setMaxAllTBPct("90");
+        vehicleTypeVO.setMaxSingleTBPct("50");
+        vehicleTypeVO.setForwardTbWeeks("10");
+        vehicleTypeVO.setExamSkillThreshold("");
+        vehicleTypeVO.setTbContingency(0);      
+        vehicleTypeVO.setDefaultType("0");
+        vehicleTypeVO.setCreatedBy("U1");
+        vehicleTypeVO.setCreatedDate("12/06/16");
+        vehicleTypeVO.setUpdatedBy("U1");
+        vehicleTypeVO.setUpdatedDate("12/06/16");
+        vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
+        vehicleTypeVO.setStartRec(null);
+        vehicleTypeVO.setEndRec(null);
+        vecVehicleTypes.add(vehicleTypeVO);
+
+    	vehicleTypeVO = new VehicleTypeVO();
+        vehicleTypeVO.setTotalRec("14");        
+        vehicleTypeVO.setCodeLabel("B2");
+        vehicleTypeVO.setDescription("M2 Bike");
+        vehicleTypeVO.setMaxAllTBPct("90");
+        vehicleTypeVO.setMaxSingleTBPct("50");
+        vehicleTypeVO.setForwardTbWeeks("10");
+        vehicleTypeVO.setExamSkillThreshold("");
+        vehicleTypeVO.setTbContingency(0);      
+        vehicleTypeVO.setDefaultType("0");
+        vehicleTypeVO.setCreatedBy("U1");
+        vehicleTypeVO.setCreatedDate("12/06/16");
+        vehicleTypeVO.setUpdatedBy("U1");
+        vehicleTypeVO.setUpdatedDate("12/06/16");
+        vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
+        vehicleTypeVO.setStartRec(null);
+        vehicleTypeVO.setEndRec(null);
+        vecVehicleTypes.add(vehicleTypeVO);
+
+    	vehicleTypeVO = new VehicleTypeVO();
+        vehicleTypeVO.setTotalRec("14");        
+        vehicleTypeVO.setCodeLabel("BE");
+        vehicleTypeVO.setDescription("B+E");
+        vehicleTypeVO.setMaxAllTBPct("85");
+        vehicleTypeVO.setMaxSingleTBPct("50");
+        vehicleTypeVO.setForwardTbWeeks("10");
+        vehicleTypeVO.setExamSkillThreshold("120");
+        vehicleTypeVO.setTbContingency(0);      
+        vehicleTypeVO.setDefaultType("0");
+        vehicleTypeVO.setCreatedBy("U1");
+        vehicleTypeVO.setCreatedDate("12/06/16");
+        vehicleTypeVO.setUpdatedBy("U1");
+        vehicleTypeVO.setUpdatedDate("12/06/16");
+        vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
+        vehicleTypeVO.setStartRec(null);
+        vehicleTypeVO.setEndRec(null);
+        vecVehicleTypes.add(vehicleTypeVO);
+
+    	vehicleTypeVO = new VehicleTypeVO();
+        vehicleTypeVO.setTotalRec("14");        
+        vehicleTypeVO.setCodeLabel("C");
+        vehicleTypeVO.setDescription("Car");
+        vehicleTypeVO.setMaxAllTBPct("0");
+        vehicleTypeVO.setMaxSingleTBPct("0");
+        vehicleTypeVO.setForwardTbWeeks("10");
+        vehicleTypeVO.setExamSkillThreshold("120");
+        vehicleTypeVO.setTbContingency(0);      
+        vehicleTypeVO.setDefaultType("1");
+        vehicleTypeVO.setCreatedBy("U1");
+        vehicleTypeVO.setCreatedDate("12/06/16");
+        vehicleTypeVO.setUpdatedBy("U1");
+        vehicleTypeVO.setUpdatedDate("12/06/16");
+        vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
+        vehicleTypeVO.setStartRec(null);
+        vehicleTypeVO.setEndRec(null);
+        vecVehicleTypes.add(vehicleTypeVO);
+
+    	vehicleTypeVO = new VehicleTypeVO();
+        vehicleTypeVO.setTotalRec("14");        
+        vehicleTypeVO.setCodeLabel("CP");
+        vehicleTypeVO.setDescription("CPC");
+        vehicleTypeVO.setMaxAllTBPct("85");
+        vehicleTypeVO.setMaxSingleTBPct("50");
+        vehicleTypeVO.setForwardTbWeeks("10");
+        vehicleTypeVO.setExamSkillThreshold("120");
+        vehicleTypeVO.setTbContingency(0);      
+        vehicleTypeVO.setDefaultType("0");
+        vehicleTypeVO.setCreatedBy("U1");
+        vehicleTypeVO.setCreatedDate("12/06/16");
+        vehicleTypeVO.setUpdatedBy("U1");
+        vehicleTypeVO.setUpdatedDate("12/06/16");
+        vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
+        vehicleTypeVO.setStartRec(null);
+        vehicleTypeVO.setEndRec(null);
+        vecVehicleTypes.add(vehicleTypeVO);
+
+    	vehicleTypeVO = new VehicleTypeVO();
+        vehicleTypeVO.setTotalRec("14");        
+        vehicleTypeVO.setCodeLabel("DE");
+        vehicleTypeVO.setDescription("Del");
+        vehicleTypeVO.setMaxAllTBPct("0");
+        vehicleTypeVO.setMaxSingleTBPct("0");
+        vehicleTypeVO.setForwardTbWeeks("10");
+        vehicleTypeVO.setExamSkillThreshold("120");
+        vehicleTypeVO.setTbContingency(0);      
+        vehicleTypeVO.setDefaultType("0");
+        vehicleTypeVO.setCreatedBy("U1");
+        vehicleTypeVO.setCreatedDate("12/06/16");
+        vehicleTypeVO.setUpdatedBy("U1");
+        vehicleTypeVO.setUpdatedDate("12/06/16");
+        vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
+        vehicleTypeVO.setStartRec(null);
+        vehicleTypeVO.setEndRec(null);
+        vecVehicleTypes.add(vehicleTypeVO);
+
+    	vehicleTypeVO = new VehicleTypeVO();
+        vehicleTypeVO.setTotalRec("14");        
+        vehicleTypeVO.setCodeLabel("L");
+        vehicleTypeVO.setDescription("Voc");
+        vehicleTypeVO.setMaxAllTBPct("85");
+        vehicleTypeVO.setMaxSingleTBPct("50");
+        vehicleTypeVO.setForwardTbWeeks("10");
+        vehicleTypeVO.setExamSkillThreshold("120");
+        vehicleTypeVO.setTbContingency(0);      
+        vehicleTypeVO.setDefaultType("0");
+        vehicleTypeVO.setCreatedBy("U1");
+        vehicleTypeVO.setCreatedDate("12/06/16");
+        vehicleTypeVO.setUpdatedBy("U1");
+        vehicleTypeVO.setUpdatedDate("12/06/16");
+        vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
+        vehicleTypeVO.setStartRec(null);
+        vehicleTypeVO.setEndRec(null);
+        vecVehicleTypes.add(vehicleTypeVO);
+
+    	vehicleTypeVO = new VehicleTypeVO();
+        vehicleTypeVO.setTotalRec("14");        
+        vehicleTypeVO.setCodeLabel("O");
+        vehicleTypeVO.setDescription("Off Road Training");
+        vehicleTypeVO.setMaxAllTBPct("0");
+        vehicleTypeVO.setMaxSingleTBPct("0");
+        vehicleTypeVO.setForwardTbWeeks("4");
+        vehicleTypeVO.setExamSkillThreshold("120");
+        vehicleTypeVO.setTbContingency(0);      
+        vehicleTypeVO.setDefaultType("0");
+        vehicleTypeVO.setCreatedBy("U1");
+        vehicleTypeVO.setCreatedDate("12/06/16");
+        vehicleTypeVO.setUpdatedBy("U1");
+        vehicleTypeVO.setUpdatedDate("12/06/16");
+        vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
+        vehicleTypeVO.setStartRec(null);
+        vehicleTypeVO.setEndRec(null);
+        vecVehicleTypes.add(vehicleTypeVO);
+
+    	vehicleTypeVO = new VehicleTypeVO();
+        vehicleTypeVO.setTotalRec("14");        
+        vehicleTypeVO.setCodeLabel("T");
+        vehicleTypeVO.setDescription("Taxi");
+        vehicleTypeVO.setMaxAllTBPct("0");
+        vehicleTypeVO.setMaxSingleTBPct("0");
+        vehicleTypeVO.setForwardTbWeeks("10");
+        vehicleTypeVO.setExamSkillThreshold("120");
+        vehicleTypeVO.setTbContingency(0);      
+        vehicleTypeVO.setDefaultType("0");
+        vehicleTypeVO.setCreatedBy("U1");
+        vehicleTypeVO.setCreatedDate("12/06/16");
+        vehicleTypeVO.setUpdatedBy("U1");
+        vehicleTypeVO.setUpdatedDate("12/06/16");
+        vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
+        vehicleTypeVO.setStartRec(null);
+        vehicleTypeVO.setEndRec(null);
+        vecVehicleTypes.add(vehicleTypeVO);
+
+    	vehicleTypeVO = new VehicleTypeVO();
+        vehicleTypeVO.setTotalRec("14");        
+        vehicleTypeVO.setCodeLabel("TC");
+        vehicleTypeVO.setDescription("Trial Car");
+        vehicleTypeVO.setMaxAllTBPct("0");
+        vehicleTypeVO.setMaxSingleTBPct("0");
+        vehicleTypeVO.setForwardTbWeeks("10");
+        vehicleTypeVO.setExamSkillThreshold("120");
+        vehicleTypeVO.setTbContingency(0);      
+        vehicleTypeVO.setDefaultType("0");
+        vehicleTypeVO.setCreatedBy("U1");
+        vehicleTypeVO.setCreatedDate("12/06/16");
+        vehicleTypeVO.setUpdatedBy("U1");
+        vehicleTypeVO.setUpdatedDate("12/06/16");
+        vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
+        vehicleTypeVO.setStartRec(null);
+        vehicleTypeVO.setEndRec(null);
+        vecVehicleTypes.add(vehicleTypeVO);
+
+    	vehicleTypeVO = new VehicleTypeVO();
+        vehicleTypeVO.setTotalRec("14");        
+        vehicleTypeVO.setCodeLabel("V4");
+        vehicleTypeVO.setDescription("V4");
+        vehicleTypeVO.setMaxAllTBPct("90");
+        vehicleTypeVO.setMaxSingleTBPct("50");
+        vehicleTypeVO.setForwardTbWeeks("10");
+        vehicleTypeVO.setExamSkillThreshold("120");
+        vehicleTypeVO.setTbContingency(0);      
+        vehicleTypeVO.setDefaultType("1");
+        vehicleTypeVO.setCreatedBy("U1");
+        vehicleTypeVO.setCreatedDate("12/06/16");
+        vehicleTypeVO.setUpdatedBy("U1");
+        vehicleTypeVO.setUpdatedDate("12/06/16");
+        vehicleTypeVO.setMode(DSAConstants.UPDATE_MODE);
+        vehicleTypeVO.setStartRec(null);
+        vehicleTypeVO.setEndRec(null);
+        vecVehicleTypes.add(vehicleTypeVO);
+        
+        int startRec = Integer.parseInt(arrPagination[0]);
+        int endRec = Integer.parseInt(arrPagination[1]);
+        if (endRec > vecVehicleTypes.size()) {
+        	endRec = vecVehicleTypes.size();
+        }
+        
+        vecVehicleTypes = vecVehicleTypes.subList(startRec - 1, endRec);
 
         arrVehicleTypeVO = new VehicleTypeVO[vecVehicleTypes.size()];
         vecVehicleTypes.toArray(arrVehicleTypeVO);
-        return arrVehicleTypeVO;*/
+        return arrVehicleTypeVO;
     }
 
 } // end of class

@@ -3,28 +3,23 @@
 <%@ taglib uri="netui-tags-databinding.tld" prefix="netui-data"%>
 <%@ taglib uri="netui-tags-html.tld" prefix="netui"%>
 <%@ taglib uri="netui-tags-template.tld" prefix="netui-template"%>
-<%@ taglib uri="i18n.tld" prefix="i18n" %>
  --%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://beehive.apache.org/netui/tags-databinding-1.0" prefix="netui-data"%>
 <%@ taglib uri="http://beehive.apache.org/netui/tags-html-1.0" prefix="netui"%>
 <%@ taglib uri="http://beehive.apache.org/netui/tags-template-1.0" prefix="netui-template"%>
+<%@ taglib uri="i18n.tld" prefix="i18n" %>
 
 <%
     String language= (String)session.getAttribute("language");
     language = (language==null)?"en":language;
 %>
 
-<%--
-<i18n:localize language="<%= language%>" bundleName="../properties/vehicleType/vehicleType" />
---%>
+<i18n:localize language="<%= language%>" bundleName="testCategory1/properties/vehicleType/vehicleType" />
 
 <link href="DSAWeb/framework/markup/shell/support/css/style.css" rel="stylesheet" type="text/css">
-<table width="100%" ><tr><td class="bea-portal-window-titlebar" align="left">
-<%--<i18n:getMessage messageName="HEADER_VEHICLE_TYPE" />--%>
-Vehicle Type Details
-</td></tr></table>
+<table width="100%" ><tr><td class="bea-portal-window-titlebar" align="left"><i18n:getMessage messageName="HEADER_VEHICLE_TYPE" /></td></tr></table>
 
 <netui:form  action="getVT">
     <netui-data:getData resultId="createFlag" value="{pageFlow.strCreatePermission}"/>
@@ -56,10 +51,7 @@ Vehicle Type Details
                                 strMessage = (arrMessage[i] == null)?"":arrMessage[i];
                                 if (strMessage != null) {
                     %>
-                        <p class="message" align="center">
-                        <%--<i18n:getMessage messageName='<%=strMessage%>'/> --%>
-                        <%=strMessage%>
-                        </p>
+                        <p class="message" align="center"><i18n:getMessage messageName='<%=strMessage%>'/> </p>
                     <%
                                 } //end of if msg not null
                             } //end of for loop
@@ -75,10 +67,10 @@ Vehicle Type Details
                         <tr>
                             <td colspan="2" >&nbsp;</td>
                             <td width="100%" align="center">
-                                 <netui:anchor action ="getVT">
+                                 <netui:anchor action ="getVT" formSubmit="true">
                                     <netui:parameter name="startRec" value="${pageFlow.prevBuff.startRec}" />
                                     <netui:parameter name="endRec" value="${pageFlow.prevBuff.endRec}" />
-                                    <netui:label value="${pageFlow.prevBuff.displayText}"></netui:label>
+                                    <netui:label value="${pageFlow.prevBuff.displayText}" style="display:inline-block"></netui:label>
                                  </netui:anchor>
                                  &nbsp;&nbsp;
                                 <netui-data:repeater dataSource="pageFlow.pageBuff">
@@ -90,25 +82,25 @@ Vehicle Type Details
                                         
                                         <netui-data:getData resultId="labelVal" value="${container.item.isLabel}" />                                    	                                   	                                    	
                                     	<c:if test="${labelVal == 'NO'}">
-                                            <netui:anchor action ="getVT">
-                                                <netui:parameter name="startRec" value="{container.item.startRec}" />
-                                                <netui:parameter name="endRec" value="{container.item.endRec}" />
-                                                <netui:label value="{container.item.displayText}"/>
+                                            <netui:anchor action ="getVT" formSubmit="true">
+                                                <netui:parameter name="startRec" value="${container.item.startRec}" />
+                                                <netui:parameter name="endRec" value="${container.item.endRec}" />
+                                                <netui:label value="${container.item.displayText}" style="display:inline-block"/>
                                             </netui:anchor>
                                         </c:if>
                                         <%-- </netui-data:choice>
                                         <netui-data:choice value="YES"> --%>
                                         <c:if test="${labelVal =='YES'}">
-                                                <netui:label value="{container.item.displayText}"/>
+                                                <netui:label value="${container.item.displayText}" style="display:inline-block"/>
                                         </c:if>
                                         <%-- </netui-data:choice> --%>
                                     </netui-data:repeaterItem>
                                 </netui-data:repeater>
                                 &nbsp;&nbsp;
-                                <netui:anchor action ="getVT">
+                                <netui:anchor action ="getVT" formSubmit="true">
                                     <netui:parameter name="startRec" value="${pageFlow.nextBuff.startRec}" />
                                     <netui:parameter name="endRec" value="${pageFlow.nextBuff.endRec}" />
-                                    <netui:label value="${pageFlow.nextBuff.displayText}"/>
+                                    <netui:label value="${pageFlow.nextBuff.displayText}" style="display:inline-block"/>
                                  </netui:anchor>
                             </td>
                         </tr>                        
@@ -124,18 +116,16 @@ Vehicle Type Details
                         if(searchResult.equalsIgnoreCase("Y")) {                
                     %>
                         <%-- <netui-data:repeater dataSource="{pageFlow.pgfArrVehicleTypeVO}">      
-                            <netui-data:repeaterHeader> --%>
-                        <netui-data:dataGrid dataSource="pageFlow.pgfArrVehicleTypeVO" name="vehicleGrid" styleClassPrefix="veh">
+                            <netui-data:repeaterHeader> 
+                            <table width="100%" cellpadding="2" cellspacing="2" border="0">
+                        --%>
+                        <netui-data:dataGrid dataSource="pageFlow.pgfArrVehicleTypeVO" name="vehicleGrid" styleClassPrefix="veh" width="100%" cellpadding="2" cellspacing="2" border="0">
+						<netui-data:configurePager disableDefaultPager="true"/>
 						<%-- <netui-data:configurePager pageSize="2" pagerFormat="firstPrevNextLast" disableDefaultPager="true"  pageAction="getVT.do" defaultPageSize="2" />
-						    <netui-data:caption>
-						        <netui-data:renderPager/>
-						        <br/>
-						    </netui-data:caption> --%>	
+						  --%>	
 					    					
-					        <table width="100%" cellpadding="2" cellspacing="2" border="0">
-                        	<netui-data:header>
+					        <netui-data:header>
                                 <tr class="table-header"> 
-                                <%-- PP Commented for POC
                                 <td ><span><i18n:getMessage messageName="LBL_SELECT" /></span></td>
                                 <td ><span><i18n:getMessage messageName="LBL_CODE_LABEL" /></span></td>
                                 <td ><span><i18n:getMessage messageName="LBL_DESCRIPTION" /></span></td>
@@ -144,16 +134,7 @@ Vehicle Type Details
                                 <td ><span><i18n:getMessage messageName="LBL_EXAM_SKILL_THRESHOLD" /> <i18n:getMessage messageName="LBL_EXAM_SKILL_THRESHOLD_UNITS" /></span></td>
                                 <td ><span><i18n:getMessage messageName="LBL_DEFAULT_TYPE" /></span></td>
 								<td ><span><i18n:getMessage messageName="LBL_FORWARD_TB_WEEKS" /></span></td>
-								 --%>
-								<td ><span>Select</span></td>
-                                <td ><span>Code</span></td>
-                                <td ><span>Description</span></td>
-                                <td ><span>Max All TB%</span></td>
-                                <td ><span>Max Single TB%</span></td>
-                                <td ><span>Exam Skill Threshold (Days)</span></td>
-                                <td ><span>DefaultType</span></td>
-								<td ><span>Forward TB Weeks</span></td> 
-                                </tr>
+								</tr>
                             <%-- </netui-data:repeaterHeader>
                             <netui-data:repeaterItem> --%>
                             </netui-data:header>					    
@@ -175,9 +156,8 @@ Vehicle Type Details
                                 </table>
                             </netui-data:repeaterFooter>
                         </netui-data:repeater> --%>
-                         </netui-data:rows>
-                         	</table>
-					</netui-data:dataGrid>
+                         	</netui-data:rows>
+						</netui-data:dataGrid>
                     <%
                        }                
                     %> 
@@ -185,29 +165,26 @@ Vehicle Type Details
             </tr>
             <tr>
                 <td colspan="2" >
-                    <%-- PP Commented for POC 
                     <i18n:getMessage id="strAcessDetailsBtn" messageName="BTN_ACCESS_DETAILS"/>
                     <i18n:getMessage id="strUpdateBtn" messageName="BTN_UPDATE"/>
                     <i18n:getMessage id="strAddBtn" messageName="BTN_ADD"/>
-                    --%>
-                    
                     <%
                  		// PP Added dummy permission for POC
                    		createPermissionFlag = "1";
                     	if (createPermissionFlag.equals("1")) {
                     %>                
-                        <netui:button value="Add" type="submit" action="showAddVT" styleClass="LoginBtn"/>
+                        <netui:button value='<%=strAddBtn%>' type="submit" action="showAddVT" styleClass="LoginBtn"/>
                     <%
                         }
                     	// PP Added dummy permission for POC
                        	updatePermissionFlag = "1";
                     	if (updatePermissionFlag.equals("1") && searchResult.equalsIgnoreCase("Y")) {
                     %>                
-                        <netui:button value="Update" type="submit" action="showUpdateVT" styleClass="LoginBtn"/>
+                        <netui:button value='<%=strUpdateBtn%>' type="submit" action="showUpdateVT" styleClass="LoginBtn"/>
                     <%
                         }
                     %>
-                    &nbsp;<netui:button value="Access Details" type="submit" action="showAcessDetails" styleClass="LoginBtn"/>                    
+                    &nbsp;<netui:button value='<%=strAcessDetailsBtn%>' type="submit" action="showAcessDetails" styleClass="LoginBtn"/>                    
                 </td>
             </tr>
         </table>

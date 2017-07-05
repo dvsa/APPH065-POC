@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+  <tlib-version>1.0</tlib-version>
+  <jsp-version>1.2</jsp-version>
+  <short-name>i18n</short-name>
+
+  <uri>/tags/internationalization</uri>
+  <display-name>Portal Internationalization</display-name>
+  
+  <description>
+    These tags help you localize JSP pages.
+  </description>
+
+  <tag>
+    <name>localize</name>
+    <tag-class>taglib.i18n.LocalizeTag</tag-class>
+    <tei-class>taglib.i18n.LocalizeExtraInfo</tei-class>
+    <body-content>empty</body-content>
+    <display-name>Localize</display-name>
+  <description> Define the language, country, variant, and base bundle name to be used throughout a page when accessing bundles via the getMessage tag. </description>
+    <attribute>
+      <name>bundleName</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <description> The base name of the MessageBundle used to retrieve localized text. </description>
+    </attribute>
+    <attribute>
+      <name>language</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <description> A two character ISO Language Code denoting the user's prefered language,or a String array of prefered language codes with stronger preferences occurring earlier in the array. </description>
+    </attribute>
+    <attribute>
+      <name>country</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <description> The two character ISO Country Code for the user's country. </description>
+    </attribute>
+    <attribute>
+      <name>variant</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <description> The locale's variant, used when the language and country are not specific enough. </description>
+    </attribute>
+    <attribute>
+      <name>charset</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <description> The name of the character encoding set to use. Defaults to an encoding appropriate for for the chosen language, or UTF-8 if that can not be determined. </description>
+    </attribute>
+    <attribute>
+      <name>contentType</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <description> The type of content contained in the page. Defaults to "text/html". </description>
+    </attribute>
+    <attribute>
+      <name>locale</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <description> Instead of specifying language, country, and variant as Strings, a java.util.Locale object can be provided. If provided, the values in the Locale will override language, country, and variant values passed to the tag. </description>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>getMessage</name>
+    <tag-class>taglib.i18n.GetMessageTag</tag-class>
+    <tei-class>taglib.i18n.GetMessageExtraInfo</tei-class>
+    <body-content>empty</body-content>
+    <display-name>Get Message</display-name>
+    <description> Retrieve localized text or messages from a JspMessageBundle as specified by the localize tag.
+    </description>
+    <attribute>
+      <name>messageName</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <description> The key used to retrieve the message from the bundle. </description>
+    </attribute>
+    <attribute>
+      <name>messageArgs</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <description> An Object array containing arguments to be replaced in the message (see java.text.MessageFormat). If no messageArgs are given, no replacements are performed and the message text is returned as-is.. </description>
+    </attribute>
+    <attribute>
+      <name>language</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <description> Overrides the language specified by the localize tag. </description>
+    </attribute>
+    <attribute>
+      <name>country</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <description> Overrides the country specified by the localize tag. </description>
+    </attribute>
+    <attribute>
+      <name>variant</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <description> Overrides the variant specified by the localize tag. </description>
+    </attribute>
+    <attribute>
+      <name>bundleName</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <description> Overrides the bundleName specified by the localize tag. </description>
+    </attribute>
+    <attribute>
+      <name>id</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description> If provided, is the name of a variable that will return the message, as a String. If id is not provided, the message is output to the JSP page.  </description>
+    </attribute>
+    <attribute>
+      <name>locale</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <description> Overrides the locale specified by the localize tag. </description>
+    </attribute>
+  </tag>
+
+</taglib>

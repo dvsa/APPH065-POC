@@ -7,6 +7,11 @@
     <definition name="defaultLayout" template="/layouts/template.jsp">
     </definition>
 
+    <definition name="authentication/welcomePage/intranetLanding" extends="defaultLayout">
+        <put name="title" value="Welcome" />
+        <put name="body" value="/authentication/welcomePage/intranetLanding.jsp" />
+    </definition>
+
     <definition name="testCategory1/vehicleType/index" extends="defaultLayout">
         <put name="title" value="Index" />
         <put name="body" value="/testCategory1/vehicleType/welcome.jsp" />
