@@ -23,11 +23,11 @@
                             <command>/subsystem=undertow/servlet-container=default:write-attribute(name="allow-non-standard-wrappers",value="true")</command>
                             <command>:reload</command>
                         </commands>
-                        <!-- for debugging -->
+                        <!-- for debugging
                         <javaOpts>
                             <javaOpt>-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=y</javaOpt>
                         </javaOpts>
-                        <!-- -->
+                        -->
                     </configuration>
                 </plugin>
             </plugins>
