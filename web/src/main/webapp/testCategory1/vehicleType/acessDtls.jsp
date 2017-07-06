@@ -47,7 +47,7 @@
                             <i18n:getMessage messageName="LBL_CREATED_BY"/>                           
                         </td>
                         <td align="left" valign="top" class="user-input">
-                            &nbsp;<netui:label value='<%=strCreatedBy%>'  style="display:inline-block"/>
+                            &nbsp;<netui:label value='<%=strCreatedBy%>'/>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -55,7 +55,7 @@
                             <i18n:getMessage messageName="LBL_CREATION_DATE"/>                        
                         </td>
                         <td align="left" valign="top" class="user-input">
-                            &nbsp;<netui:label value='<%=strCreatedDate%>'  style="display:inline-block"/>
+                            &nbsp;<netui:label value='<%=strCreatedDate%>'/>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -63,7 +63,7 @@
                             <i18n:getMessage messageName="LBL_MODIFIED_BY"/>                          
                         </td>
                         <td align="left" valign="top" class="user-input">
-                            &nbsp;<netui:label value='<%=strUpdatedBy%>'  style="display:inline-block"/>
+                            &nbsp;<netui:label value='<%=strUpdatedBy%>'/>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -71,7 +71,7 @@
                             <i18n:getMessage messageName="LBL_MODIFIED_DATE"/>                        
                         </td>
                         <td align="left" valign="top" class="user-input">
-                            &nbsp;<netui:label value='<%=strUpdatedDate%>'  style="display:inline-block"/>
+                            &nbsp;<netui:label value='<%=strUpdatedDate%>'/>
                         </td>
                     </tr>                    
                 </table>

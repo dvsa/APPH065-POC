@@ -64,7 +64,7 @@
                                  <netui:anchor action ="getVT" formSubmit="true">
                                     <netui:parameter name="startRec" value="${pageFlow.prevBuff.startRec}" />
                                     <netui:parameter name="endRec" value="${pageFlow.prevBuff.endRec}" />
-                                    <netui:label value="${pageFlow.prevBuff.displayText}" style="display:inline-block"></netui:label>
+                                    <netui:label value="${pageFlow.prevBuff.displayText}"></netui:label>
                                  </netui:anchor>
                                  &nbsp;&nbsp;
                                 <netui-data:repeater dataSource="pageFlow.pageBuff">
@@ -79,13 +79,13 @@
                                             <netui:anchor action ="getVT" formSubmit="true">
                                                 <netui:parameter name="startRec" value="${container.item.startRec}" />
                                                 <netui:parameter name="endRec" value="${container.item.endRec}" />
-                                                <netui:label value="${container.item.displayText}" style="display:inline-block"/>
+                                                <netui:label value="${container.item.displayText}"/>
                                             </netui:anchor>
                                         </c:if>
                                         <%-- </netui-data:choice>
                                         <netui-data:choice value="YES"> --%>
                                         <c:if test="${labelVal =='YES'}">
-                                                <netui:label value="${container.item.displayText}" style="display:inline-block"/>
+                                                <netui:label value="${container.item.displayText}"/>
                                         </c:if>
                                         <%-- </netui-data:choice> --%>
                                     </netui-data:repeaterItem>
@@ -94,7 +94,7 @@
                                 <netui:anchor action ="getVT" formSubmit="true">
                                     <netui:parameter name="startRec" value="${pageFlow.nextBuff.startRec}" />
                                     <netui:parameter name="endRec" value="${pageFlow.nextBuff.endRec}" />
-                                    <netui:label value="${pageFlow.nextBuff.displayText}" style="display:inline-block"/>
+                                    <netui:label value="${pageFlow.nextBuff.displayText}"/>
                                  </netui:anchor>
                             </td>
                         </tr>                        
